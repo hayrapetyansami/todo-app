@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+body {
+    font-family: tahoma;
+}
+
+:root {
+    --blue: #1e90ff;
+    --white: #ffffff;
+    --red: #d00;
+    --green: rgb(8, 172, 8);
+}
+
+#app {
+    padding: 30px;
+    margin: 10% auto;
+    max-width: 600px;
+    border: 2px solid #ccc;
+}
+
+#app h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#app #screen {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+#app #screen #todo_text_input, #add_todo {
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+#app #screen #todo_text_input {
+    border: 1px solid #ccc;
+    margin-right: 8px;
+    width: 80%;
+}
+
+
+#app #screen #add_todo {
+    background: var(--blue);
+    border: 1px solid var(--blue);
+    color: var(--white);
+}
+
+#app #list > li {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    margin-bottom: 15px;
+    justify-content: flex-end;
+    position: relative;
+}
+
+#app #list > li > .todo_text {
+    font-size: 16px;
+    margin-right: 8px;
+    align-content: flex-start;
+    width: 100%;
+}
+
+#app #list > li > button {
+    padding: 5px 10px;
+    margin-left: auto;
+    cursor: pointer;
+    color: var(--white);
+}
+
+#app #list > li > .finish_todo {
+    background: var(--green);
+    border: 1px solid var(--green);
+    margin-left: auto;
+    margin-right: 8px;
+}
+
+#app #list > li > .remove_todo {
+    background: var(--red);
+    border: 1px solid var(--red);
+    margin-left: auto;
+}
+
+/* line */
+
+#app #list > li.finished::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #000;
+    position: absolute;
+}
